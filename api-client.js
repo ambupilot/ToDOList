@@ -44,12 +44,12 @@ const postItem = function(description, done) {
 
 // Item DELETEN van API (thanks to postman docs :-) )
 const deleteItem = function(id) {
-    var myHeaders = new Headers();
+    let myHeaders = new Headers();
     myHeaders.append("Content-Type", "application/json");
     
-    var raw = JSON.stringify({id:{}});
+    let raw = JSON.stringify({id:{}});
     
-    var requestOptions = {
+    let requestOptions = {
       method: 'DELETE',
       headers: myHeaders,
       body: raw,
