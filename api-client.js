@@ -9,16 +9,14 @@ const getData = async function (endPoint) {
         const res = await fetch(apiUrl, {method: "GET"});
         // console.log("Response van API", res);
         const result = await res.json();
-        //console.log("Before (the raw result):", result);
-
+        // console.log("Before (the raw result):", result);
         let tasks = Object.keys(result).map(key => ({
             id: key,
             description: result[key].description,
             done: result[key].done
         }));
-        //console.log("After the tasks array", tasks);
-
-        return result;
+        // console.log("After the tasks array", tasks);
+        return tasks;
     }   catch (error) {
         console.log(error);        
     }
