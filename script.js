@@ -1,6 +1,6 @@
 const getToDos = async function() {
     const data = await getData('tasks.json');
-    console.log("toDos data: ", data);
+    // console.log("toDos data: ", data);
     // iterate over tasks
     data.forEach(element => {
        // console.log(element.id);
