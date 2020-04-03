@@ -5,4 +5,26 @@
     margin-right: auto;
     margin-top: 50px;
     border: 1px solid #ccc;
+    padding-bottom: 20px;
+}
+ul {
+    display: inline; /* padding links verwijderen*/
+}
+ul#tasks {
+    list-style-type: none;
+}
+ul#tasks li {
+    padding: 5px 0px 5px 10px;
+    border-bottom: 1px solid #ccc;
+}
+.check {
+    margin-right: 25px;
+}
+.deleteBtn {
+    max-height: 15px;
+    float: right;
+    padding-right: 40px;
+}
+.taskdone {
+    text-decoration: line-through;
 }
