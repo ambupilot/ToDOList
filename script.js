@@ -4,6 +4,9 @@ const buttonAddTask = document.getElementById('buttonAddTask');
 const ulTasks = document.getElementById('tasks');
 const deleteButtons = document.getElementsByClassName('deleteBtn');
 
+// postItem(description, done) => post item
+// deleteItem(id) => delete item met het meegegeven id token
+
 const getToDos = async function() {
     const data = await getData('tasks.json');
     // console.log("toDos data: ", data);
@@ -39,19 +42,23 @@ const getToDos = async function() {
     })
 }
 
+// const deleteItem = function(id) {
+const deleteToDo = function() {}
 
 
-// Function clear list (test purposes = reload after add/delete)
+// Function clear list -> not db. (test purposes = reload after add/delete)
 const emptyList = function () {
     ulTasks.querySelectorAll('li').forEach(n => n.remove())
 }
 
 // eventlistners:
 buttonAddTask.addEventListener('click', function() {
+    console.log('test');    
    emptyList();
 })
 
 // deletebuttons: eerst array van maken
+
 const addElToDeleteBtn = async function() {
 Array.from(deleteButtons).forEach(function (btn) {
     btn.addEventListener('click', function () {
@@ -60,17 +67,9 @@ Array.from(deleteButtons).forEach(function (btn) {
 })
 }
 
-
-
 // wachten tot DOM en alles geladen is VOOR uitvoeren
 document.addEventListener("DOMContentLoaded", () => {
     // welke functies moeten worden geladen na laden:
     getToDos();
-    addElToDeleteBtn();
+    addElToDeleteBtn()
 });
-
-/*
-deleteButton.addEventListener('click', function()  {
-    emptyList();
-})
-*/

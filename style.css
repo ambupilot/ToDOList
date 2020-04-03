@@ -24,6 +24,7 @@ ul#tasks li {
     max-height: 15px;
     float: right;
     padding-right: 40px;
+    height: 25px;
 }
 .taskdone {
     text-decoration: line-through;
