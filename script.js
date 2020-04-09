@@ -69,7 +69,6 @@ const emptyList = function () {
 
 console.log('deleteButtons voor array.from: ', deleteButtons);
 
-//console.log(Array.from("array from output: ",deleteButtons));
 
 const deleteIcons = function() {
     return Array.from(deleteButtons);
