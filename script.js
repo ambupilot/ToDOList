@@ -48,6 +48,7 @@ inputNewTask.addEventListener('change', function(e) {
     inputToAdd(inputText)
 } )
 
+
 inputToAdd = function(text) {
     buttonAddTask.addEventListener('click', function(e) {
         let knop = e.target.value;
@@ -65,6 +66,44 @@ inputToAdd = function(text) {
 const emptyList = function () {
     ulTasks.querySelectorAll('li').forEach(n => n.remove())
 }
+
+console.log('deleteButtons voor array.from: ', deleteButtons);
+
+//console.log(Array.from("array from output: ",deleteButtons));
+
+const deleteIcons = function() {
+    return Array.from(deleteButtons);
+}
+console.log('deleteButtons -> deleteIcons NA array from: ',deleteIcons());
+// empty. Na renderen van de pagina WEL opvraagbaar in de console
+
+/*
+    deleteButtons.forEach(function (knop) {
+        knop.addEventListener('click', function(e) {
+            console.log(e.value);
+        })
+    })
+
+
+
+//console.log(deleteButtons);
+/*
+    Array.from(deleteButtons).forEach(function (knop) {
+        knop.addEventListener('click', function(e) {
+            //let knopId = e.target.id;
+            console.log(e.value);
+            
+        })
+    })
+    // addEventListner('click', function () {
+        // let knopId = e.target.id
+        // console.log(knopId);
+        // deleteItem(knopId)
+        
+  //  })
+
+*/
+
 
 // wachten tot DOM en alles geladen is VOOR uitvoeren
 document.addEventListener("DOMContentLoaded", () => {
